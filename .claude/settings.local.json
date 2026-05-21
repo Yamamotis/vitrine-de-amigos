@@ -5,7 +5,14 @@
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\dra luciana akemi\")",
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\g3 beach tennis\")",
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\guifs studio personal\")",
-      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\shr oficina\")"
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\shr oficina\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\shr oficina\" \"shroficina\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\vets for you\" \"vetsforyou\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\dra luciana akemi\" \"dralucianaakemi\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\g3 beach tennis\" \"g3beachtennis\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\guifs studio personal\" \"guifsstudiopersonal\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\julio retrospectivas\" \"julioretrospectivas\")",
+      "PowerShell(Rename-Item \"d:\\\\friends helper\\\\brownie cai�ara\" \"browniecaicara\")"
     ]
   }
 }
