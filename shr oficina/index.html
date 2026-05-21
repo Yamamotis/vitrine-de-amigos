@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHR Oficina — Mecânica de Caminhões & Funilaria</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="SHR Oficina" class="logo-img" />
+        SHR OFICINA
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#servicos"   onclick="closeNav()">Serviços</a></li>
+        <li><a href="#como-pedir" onclick="closeNav()">Como Funciona</a></li>
+        <li><a href="#pedido"     onclick="closeNav()" class="nav-cta">Falar conosco</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-dots"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🔧 Mecânica & Funilaria · Santos - SP</span>
+      <h1>Seu caminhão<br/><em>nas melhores mãos.</em></h1>
+      <p>Especialistas em mecânica de caminhões e funilaria em Santos. Diagnóstico preciso, serviço de qualidade e entrega no prazo.</p>
+      <div class="hero-btns">
+        <a href="#pedido" class="btn-primary">Falar pelo WhatsApp</a>
+        <a href="#servicos" class="btn-secondary">Ver serviços</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-ring"></div>
+        <img src="logo.png" alt="SHR Oficina" class="hero-logo" />
+        <span class="float-tag f1">🚛 Caminhões</span>
+        <span class="float-tag f2">🔧 Funilaria</span>
+        <span class="float-tag f3">📍 Vila Matias, Santos</span>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,72 L0,72 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="section-inner">
+      <span class="section-label reveal">O que fazemos</span>
+      <h2 class="reveal">Nossos serviços</h2>
+      <p class="section-sub reveal">Atendemos caminhões de todos os portes com mão de obra qualificada, peças de qualidade e compromisso com o prazo.</p>
+      <div class="cards-grid">
+
+        <div class="flavor-card reveal" style="--accent:#c44000" data-servico="Mecânica de Caminhões">
+          <div class="card-icon">🔧</div>
+          <h3>Mecânica de Caminhões</h3>
+          <p>Motor, câmbio, diferencial, embreagem e sistema de arrefecimento. Diagnóstico completo com equipamento especializado para caminhões de todos os portes.</p>
+          <span class="price">Solicite orçamento</span>
+          <button class="add-to-order" onclick="addServico('Mecânica de Caminhões')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#c44000" data-servico="Funilaria & Pintura">
+          <div class="card-icon">🚛</div>
+          <h3>Funilaria & Pintura</h3>
+          <p>Reparo de lataria, cabine e baú. Pintura com acabamento profissional que devolve a aparência original do seu veículo.</p>
+          <span class="price">Solicite orçamento</span>
+          <button class="add-to-order" onclick="addServico('Funilaria & Pintura')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#e8a000" data-servico="Freios & Suspensão">
+          <div class="card-icon">⚙️</div>
+          <h3>Freios & Suspensão</h3>
+          <p>Regulagem e troca de freios, molas, amortecedores e geometria. Segurança em primeiro lugar na estrada.</p>
+          <span class="price">Solicite orçamento</span>
+          <button class="add-to-order" onclick="addServico('Freios & Suspensão')">+ Selecionar</button>
+        </div>
+
+<div class="flavor-card reveal" style="--accent:#3a7a3a" data-servico="Revisão Preventiva">
+          <div class="card-icon">🔩</div>
+          <h3>Revisão Preventiva</h3>
+          <p>Checklist completo de fluidos, filtros, correias e componentes. Evite paradas inesperadas e mantenha seu caminhão sempre pronto.</p>
+          <span class="price">Solicite orçamento</span>
+          <button class="add-to-order" onclick="addServico('Revisão Preventiva')">+ Selecionar</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C360,70 1080,0 1440,50 L1440,72 L0,72 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-pedir">
+    <div class="section-inner">
+      <span class="section-label reveal">Simples assim</span>
+      <h2 class="reveal">Como funciona</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-emoji">📞</div>
+          <div class="step-number">01</div>
+          <h4>Entre em contato</h4>
+          <p>Fale pelo WhatsApp ou ligue. Descreva o problema e agendamos a entrada do veículo.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-emoji">🔍</div>
+          <div class="step-number">02</div>
+          <h4>Diagnóstico</h4>
+          <p>Avaliamos o veículo e apresentamos o orçamento detalhado antes de iniciar qualquer serviço.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-emoji">✅</div>
+          <div class="step-number">03</div>
+          <h4>Reparo & Entrega</h4>
+          <p>Executamos o serviço com qualidade e entregamos no prazo combinado. Garantia no serviço.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,50 C480,0 960,70 1440,20 L1440,72 L0,72 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="pedido">
+    <div class="section-inner">
+      <span class="section-label reveal">Vamos resolver!</span>
+      <h2 class="reveal">Fale conosco</h2>
+      <p class="section-sub reveal">Selecione o serviço acima ou descreva o problema do seu veículo abaixo. Retornamos rapidinho.</p>
+
+      <div class="order-box reveal">
+        <div id="order-list-wrap">
+          <h4>Serviço(s) selecionado(s):</h4>
+          <ul id="order-list">
+            <li class="empty-msg">Nenhum serviço selecionado ainda.<br/>Clique em "+ Selecionar" nos cards acima.</li>
+          </ul>
+          <button id="clear-order" onclick="clearOrder()" style="display:none;">🗑 Limpar seleção</button>
+        </div>
+
+        <div class="order-form">
+          <label for="customer-name">Seu nome</label>
+          <input type="text" id="customer-name" placeholder="Ex: Roberto" />
+
+          <label for="veiculo-info">Veículo (opcional)</label>
+          <input type="text" id="veiculo-info" placeholder="Ex: Volvo FH 460, 2018" />
+
+          <label for="obs">Descreva o problema / Observações</label>
+          <textarea id="obs" placeholder="Ex: caminhão fazendo barulho no motor, perda de potência…"></textarea>
+
+          <button class="btn-whatsapp" onclick="sendWhatsApp()">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,72 L0,72 Z" fill="#111111"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="section-inner sobre-grid">
+      <div class="sobre-text reveal">
+        <span class="section-label">Quem somos</span>
+        <h2>Por que escolher a SHR?</h2>
+        <p>A SHR Oficina Yamamoto tem anos de experiência em mecânica pesada e funilaria de caminhões em Santos. Atendemos com seriedade, transparência e foco em fazer o veículo voltar à estrada o mais rápido possível.</p>
+        <p>Localizada na Vila Matias, em Santos, com fácil acesso para caminhões de grande porte.</p>
+        <ul class="vantagens">
+          <li><span class="check">✓</span> Especialistas em mecânica de caminhões</li>
+          <li><span class="check">✓</span> Funilaria e pintura profissional</li>
+          <li><span class="check">✓</span> Orçamento sem compromisso</li>
+          <li><span class="check">✓</span> Garantia nos serviços realizados</li>
+        </ul>
+        <div class="horarios reveal">
+          <h4>⏰ Horário de funcionamento</h4>
+          <ul>
+            <li><span>Segunda a Sexta</span><strong>08:00 – 18:00</strong></li>
+            <li><span>Sábado</span><strong>08:00 – 15:00</strong></li>
+            <li><span>Domingo</span><strong>Fechado</strong></li>
+          </ul>
+          <p class="endereco">📍 R. Dona Luiza Macuco, 19 — Vila Matias, Santos/SP</p>
+        </div>
+      </div>
+      <div class="sobre-visual reveal">
+        <img src="logo.png" alt="SHR Oficina" class="sobre-logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="logo.png" alt="SHR Oficina" class="footer-logo" />
+    <p><strong>SHR OFICINA YAMAMOTO</strong> — Mecânica de Caminhões & Funilaria</p>
+    <p>
+      <a href="tel:1330418858">(13) 3041-8858</a>
+      &nbsp;·&nbsp;
+      <a href="https://wa.me/5513974071034" target="_blank">WhatsApp (13) 97407-1034</a>
+    </p>
+    <p>📍 R. Dona Luiza Macuco, 19 — Vila Matias, Santos/SP</p>
+    <p class="footer-tiny">© 2026 SHR Oficina Yamamoto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="fab-whatsapp" href="https://wa.me/5513974071034" target="_blank" id="fab" aria-label="Fale pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>Falar conosco</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
