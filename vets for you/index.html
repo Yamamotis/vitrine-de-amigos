@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vets for You — Adestramento Inteligente</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="Vets for You" class="logo-img" />
+        Vets for You
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#servicos" onclick="closeNav()">Serviços</a></li>
+        <li><a href="#como-pedir" onclick="closeNav()">Como Funciona</a></li>
+        <li><a href="#pedido" onclick="closeNav()" class="nav-cta">Agendar</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-dots"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🐾 Adestramento profissional</span>
+      <h1>O adestrador que<br /><em>transforma vidas</em></h1>
+      <p>Método positivo, resultados reais. Seu cão mais feliz, seguro e obediente — sem estresse e sem punições.</p>
+      <div class="hero-btns">
+        <a href="#pedido" class="btn-primary">Quero agendar uma sessão</a>
+        <a href="#servicos" class="btn-secondary">Ver serviços</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-ring"></div>
+        <img src="logo.png" alt="Vets for You" class="hero-logo" />
+        <span class="float-tag f1">🐕 Método positivo</span>
+        <span class="float-tag f2">🏆 +200 cães</span>
+        <span class="float-tag f3">❤️ Sem punições</span>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,70 L0,70 Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="section-inner">
+      <span class="section-label reveal">Nossos serviços</span>
+      <h2 class="reveal">Escolha o pacote ideal</h2>
+      <p class="section-sub reveal">Cada cão é único. Adaptamos o treinamento ao temperamento e às necessidades
+        específicas do seu pet.</p>
+      <div class="cards-grid">
+
+        <div class="flavor-card reveal" style="--accent:#3d7a8a" data-flavor="Sessão Avulsa">
+          <div class="card-icon">🎯</div>
+          <h3>Sessão Avulsa</h3>
+          <p>Ideal para dúvidas pontuais ou reforço de comandos. 1h de treinamento personalizado na sua casa.</p>
+          <button class="add-to-order" onclick="addService('Sessão Avulsa')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#c89028" data-flavor="Pacote Inicial (5 sessões)">
+          <div class="card-icon">🌱</div>
+          <h3>Pacote Inicial</h3>
+          <p>Para cães com comportamentos básicos a corrigir. Fundamentos de obediência: senta, fica, vem, não pula.</p>
+          <button class="add-to-order" onclick="addService('Pacote Inicial (5 sessões)')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#2d5f6b" data-flavor="Pacote Intermediário (10 sessões)">
+          <div class="card-icon">⭐</div>
+          <h3>Pacote Intermediário</h3>
+          <p>Corrige comportamentos difíceis: latido excessivo, ciúme, agressividade, medo e ansiedade.</p>
+          <button class="add-to-order" onclick="addService('Pacote Intermediário (10 sessões)')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#4a8fa8" data-flavor="Adestramento em Grupo">
+          <div class="card-icon">🐶</div>
+          <h3>Adestramento em Grupo</h3>
+          <p>Socialização e obediência em grupo. Ótimo para cães tímidos, agitados ou que latam para outros animais.</p>
+          <button class="add-to-order" onclick="addService('Adestramento em Grupo')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card destaque reveal" style="--accent:#c89028" data-flavor="Imersão Total (15 dias)">
+          <div class="card-badge">⭐ Mais procurado</div>
+          <div class="card-icon">🏅</div>
+          <h3>Imersão Total</h3>
+          <p>Deixe seu cão 15 dias conosco. Transformação completa com acompanhamento diário e relatório de evolução.
+          </p>
+          <button class="add-to-order" onclick="addService('Imersão Total (15 dias)')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#1a3d48" data-flavor="Consultoria Online">
+          <div class="card-icon">💻</div>
+          <h3>Consultoria Online</h3>
+          <p>Orientação especializada por videochamada. Atendemos todo o Brasil. Diagnóstico e plano de treino.</p>
+          <button class="add-to-order" onclick="addService('Consultoria Online')">+ Selecionar</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C360,70 1080,0 1440,50 L1440,70 L0,70 Z" fill="#f0f7f9" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-pedir">
+    <div class="section-inner">
+      <span class="section-label reveal">Simples assim</span>
+      <h2 class="reveal">Como funciona</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-emoji">🐾</div>
+          <div class="step-number">01</div>
+          <h4>Escolha o pacote</h4>
+          <p>Analise o perfil do seu cão e selecione o serviço ideal para as necessidades dele.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-emoji">📱</div>
+          <div class="step-number">02</div>
+          <h4>Agende pelo WhatsApp</h4>
+          <p>Clique no botão e a mensagem já vem pré-preenchida com o pacote escolhido.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-emoji">🏠</div>
+          <div class="step-number">03</div>
+          <h4>Receba o treinamento</h4>
+          <p>Na sua casa ou em local combinado. Acertamos data, horário e forma de pagamento.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,50 C480,0 960,70 1440,20 L1440,70 L0,70 Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section id="pedido">
+    <div class="section-inner">
+      <span class="section-label reveal">Vamos começar!</span>
+      <h2 class="reveal">Agende sua sessão</h2>
+      <p class="section-sub reveal">Selecione os serviços acima ou descreva o que precisa nas observações abaixo.</p>
+
+      <div class="order-box reveal">
+        <div id="order-list-wrap">
+          <h4>Serviços selecionados:</h4>
+          <ul id="order-list">
+            <li class="empty-msg">Nenhum serviço selecionado ainda.<br />Clique em "+ Selecionar" nos pacotes acima.
+            </li>
+          </ul>
+          <button id="clear-order" onclick="clearOrder()" style="display:none;">🗑 Limpar seleção</button>
+        </div>
+
+        <div class="order-form">
+          <label for="customer-name">Seu nome</label>
+          <input type="text" id="customer-name" placeholder="Ex: João" />
+
+          <label for="dog-info">Nome e raça do seu cão (opcional)</label>
+          <input type="text" id="dog-info" placeholder="Ex: Rex, Golden Retriever, 2 anos" />
+
+          <label for="obs">Comportamentos a corrigir / Observações</label>
+          <textarea id="obs" placeholder="Ex: late muito, pula nas pessoas, não obedece comandos…"></textarea>
+
+          <button class="btn-whatsapp" onclick="sendWhatsApp()">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Agendar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,70 L0,70 Z" fill="#1a3d48" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="section-inner sobre-grid">
+      <div class="sobre-text reveal">
+        <span class="section-label">Nossa história</span>
+        <h2>Por que nosso método funciona?</h2>
+        <p>Tudo começa entendendo que punição não educa — ela apenas assusta. Usamos o reforço positivo para mostrar ao
+          cão o que é certo, criando uma relação de confiança entre ele e o dono.</p>
+        <p>Cada treino é adaptado ao temperamento, à raça e à rotina do seu cão. Sem fórmulas genéricas.</p>
+        <ul class="vantagens">
+          <li><span class="check">✓</span> Método positivo (sem punição)</li>
+          <li><span class="check">✓</span> Atendimento domiciliar</li>
+          <li><span class="check">✓</span> +200 cães transformados</li>
+          <li><span class="check">✓</span> Resultados com garantia</li>
+        </ul>
+      </div>
+      <div class="sobre-visual reveal">
+        <img src="logo.png" alt="Vets for You" class="sobre-logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="logo.png" alt="EduCão" class="footer-logo" />
+    <p><strong>Vets for You</strong> — Adestramento profissional com método positivo.</p>
+    <p>
+      <a href="https://instagram.com/vetsforyou" target="_blank">@VetsForYou</a>
+      &nbsp;·&nbsp;
+      <a href="https://wa.me/5511997677798" target="_blank">WhatsApp (61) 98679-0532</a>
+    </p>
+    <p class="footer-tiny">© 2026 Vets for You. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="fab-whatsapp" href="https://wa.me/5511997677798" target="_blank" id="fab" aria-label="Fale pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span>Agendar agora</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

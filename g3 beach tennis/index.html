@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G3 Beach Tennis — Jogue, evolua, vença.</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="G3 Beach Tennis" class="logo-img" />
+        G3 BEACH TENNIS
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#planos" onclick="closeNav()">Planos</a></li>
+        <li><a href="#como-pedir" onclick="closeNav()">Como Funciona</a></li>
+        <li><a href="#pedido" onclick="closeNav()" class="nav-cta">Agendar Aula</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-dots"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🎾 Beach Tennis profissional</span>
+      <h1>Jogue, evolua,<br /><em>vença.</em></h1>
+      <p>Aulas para todos os níveis diretamente na praia, com uma comunidade apaixonada pelo esporte. Venha fazer parte
+        do G3.</p>
+      <div class="hero-btns">
+        <a href="#pedido" class="btn-primary">Quero agendar minha aula</a>
+        <a href="#planos" class="btn-secondary">Ver planos</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-ring"></div>
+        <img src="logo.png" alt="G3 Beach Tennis" class="hero-logo" />
+        <span class="float-tag f1">🏖️ Na praia</span>
+        <span class="float-tag f2">⚡ Alta performance</span>
+        <span class="float-tag f3">🎾 Todos os níveis</span>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,70 L0,70 Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section id="planos">
+    <div class="section-inner">
+      <span class="section-label reveal">O que oferecemos</span>
+      <h2 class="reveal">Escolha seu nível</h2>
+      <p class="section-sub reveal">Do iniciante ao avançado, temos o plano certo para o seu nível e objetivo. Aulas na
+        praia com professor especializado.</p>
+      <div class="cards-grid">
+
+        <div class="flavor-card reveal" style="--accent:#1a4ab5" data-plano="Primeira aula">
+          <div class="card-icon">🎯</div>
+          <h3>Primeira aula</h3>
+          <p>Nunca jogou beach tennis? Venha experimentar com um professor especializado. Raquete e bola inclusos — só
+            aparecer!</p>
+          <span class="price">Consulte</span>
+          <button class="add-to-order" onclick="addPlano('Primeira aula')">+ Selecionar</button>
+        </div>
+
+        <div class="flavor-card reveal" style="--accent:#22cc44" data-plano="Já pratico a um tempo">
+          <div class="card-icon">⚡</div>
+          <h3>Já pratico a um tempo</h3>
+          <p>Já tem experiência na areia e quer evoluir? Avaliamos seu nível e montamos um plano focado na sua evolução
+            técnica e tática.</p>
+          <span class="price">Consulte</span>
+          <button class="add-to-order" onclick="addPlano('Já pratico a um tempo')">+ Selecionar</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C360,70 1080,0 1440,50 L1440,70 L0,70 Z" fill="#eef4ff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-pedir">
+    <div class="section-inner">
+      <span class="section-label reveal">Simples assim</span>
+      <h2 class="reveal">Como começar</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-emoji">🎾</div>
+          <div class="step-number">01</div>
+          <h4>Escolha o plano</h4>
+          <p>Selecione o plano ou serviço que melhor se encaixa no seu nível e disponibilidade.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-emoji">📱</div>
+          <div class="step-number">02</div>
+          <h4>Fale pelo WhatsApp</h4>
+          <p>Clique no botão — a mensagem já vem pré-preenchida com o plano escolhido.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-emoji">🏖️</div>
+          <div class="step-number">03</div>
+          <h4>Apareça e jogue</h4>
+          <p>Confirmamos seu horário e você já chega pronto para a praia. É simples assim!</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,50 C480,0 960,70 1440,20 L1440,70 L0,70 Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section id="pedido">
+    <div class="section-inner">
+      <span class="section-label reveal">Bora jogar!</span>
+      <h2 class="reveal">Agende sua aula</h2>
+      <p class="section-sub reveal">Selecione o plano acima ou descreva o que procura nas observações abaixo.</p>
+
+      <div class="order-box reveal">
+        <div id="order-list-wrap">
+          <h4>Plano(s) selecionado(s):</h4>
+          <ul id="order-list">
+            <li class="empty-msg">Nenhum plano selecionado ainda.<br />Clique em "+ Selecionar" nos cards acima.</li>
+          </ul>
+          <button id="clear-order" onclick="clearOrder()" style="display:none;">🗑 Limpar seleção</button>
+        </div>
+
+        <div class="order-form">
+          <label for="customer-name">Seu nome</label>
+          <input type="text" id="customer-name" placeholder="Ex: Carlos" />
+
+          <label for="nivel-info">Seu nível (opcional)</label>
+          <input type="text" id="nivel-info" placeholder="Ex: iniciante, intermediário, avançado" />
+
+          <label for="obs">Disponibilidade / Observações</label>
+          <textarea id="obs" placeholder="Ex: manhãs de segunda e quarta, interesse em aulas individuais…"></textarea>
+
+          <button class="btn-whatsapp" onclick="sendWhatsApp()">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Agendar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,0 480,70 720,35 C960,0 1200,70 1440,35 L1440,70 L0,70 Z" fill="#0d1a4d" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="section-inner sobre-grid">
+      <div class="sobre-text reveal">
+        <span class="section-label">Quem somos</span>
+        <h2>Por que jogar no G3?</h2>
+        <p>O G3 Beach Tennis nasceu da paixão pelo esporte e pelo desejo de democratizar o beach tennis. Aqui, do
+          iniciante ao atleta, todo mundo tem espaço para evoluir.</p>
+        <p>Professores certificados, estrutura completa e uma comunidade que cresce todo dia. Venha fazer parte!</p>
+        <ul class="vantagens">
+          <li><span class="check">✓</span> Professores certificados e experientes</li>
+          <li><span class="check">✓</span> Aulas diretamente na praia</li>
+          <li><span class="check">✓</span> Turmas para todos os níveis</li>
+          <li><span class="check">✓</span> Comunidade apaixonada pelo esporte</li>
+        </ul>
+      </div>
+      <div class="sobre-visual reveal">
+        <img src="logo.png" alt="G3 Beach Tennis" class="sobre-logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="logo.png" alt="G3 Beach Tennis" class="footer-logo" />
+    <p><strong>G3 BEACH TENNIS</strong> — Jogue, evolua, vença.</p>
+    <p>
+      <a href="https://wa.me/5513991016981" target="_blank">WhatsApp</a>
+    </p>
+    <p class="footer-tiny">© 2026 G3 Beach Tennis. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="fab-whatsapp" href="https://wa.me/5513991016981" target="_blank" id="fab" aria-label="Fale pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span>Agendar agora</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

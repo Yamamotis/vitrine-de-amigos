@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\dra luciana akemi\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\dra luciana akemi\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\g3 beach tennis\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\friends helper\\\\guifs studio personal\")"
+    ]
+  }
+}
